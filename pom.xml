@@ -12,6 +12,7 @@
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<jackson.version>1.9.10</jackson.version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -89,6 +90,12 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
+		<!-- Jackson JSON Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 				
 		<!-- Servlet -->
 		<dependency>
@@ -108,6 +115,13 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
+		<!-- For enabling @EnableWebMvc annotation -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2.2</version>
+		</dependency>
 	
 		<!-- Test -->
 		<dependency>
@@ -116,6 +130,13 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>        
+		<dependency>
+		    <groupId>sample</groupId>
+		    <artifactId>com.dimag.ai</artifactId>
+		    <version>1.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/src/main/resources/Ab.jar</systemPath>
+		</dependency>
 	</dependencies>
     <build>
         <plugins>
